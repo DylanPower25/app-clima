@@ -1,27 +1,84 @@
-*{
-    font-family : 'Roboto', sans-serif;
+/* Fuente y reset de estilos */
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background-color: #CBE896;
+/* Fondo con degradado */
+body {
+    background: linear-gradient(135deg, #CBE896, #91C499);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#container{
-    background-color: #AAC0AA;
-    padding: 20px;
+/* Contenedor principal */
+#container {
+    background-color: #fff;
+    padding: 25px;
     display: flex;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
 }
 
-#container >.block{
-    padding: 20px;
+/* Bloques principales */
+.block {
+    color: #4A4A4A;
+    margin-bottom: 20px;
 }
 
-.block{
-   color: #A18276;
+/* Ubicación */
+#location {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Contenedor de fecha y descripción */
+#date, #description {
+    font-size: 16px;
+    color: #444;
+    margin-top: 8px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espacio entre icono y texto */
+}
+
+/* Icono de la descripción */
+#description::before {
+    content: "🌦"; /* Se puede cambiar dinámicamente con JS */
+    font-size: 18px;
+}
+
+/* Contenedor de información (temperatura, presión, humedad) */
+.information-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Tarjetas de información */
+.info {
+    background: #E8F5E9;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Datos dentro de las tarjetas */
+.info div {
+    font-size: 22px;
+    font-weight: 700;
+    color: #00796B;
 }
